@@ -20,12 +20,14 @@ public class LibraryClass {
 		prop.load(file);
 		
 		if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\hamed\\Desktop\\updateChrome\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromepath"));
+				
 			driver = new ChromeDriver();
 		}
 		else if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
 			
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\hamed\\eclipse-workspace\\recovered\\WorkShop_CucumberProject\\src\\test\\resources\\Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", prop.getProperty("firefoxpath"));
+					
 			driver = new FirefoxDriver();
 		}
 				

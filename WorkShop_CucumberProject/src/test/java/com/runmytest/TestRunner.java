@@ -1,4 +1,4 @@
-package com.TestRunner;
+package com.runmytest;
 
 import org.testng.annotations.AfterClass;
 
